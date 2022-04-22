@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="templates.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <title>Kurt's Pizza - Essen bestellen | Lieferando</title>
+    <link rel="icon" type="image/x-icon" href="./img/LieferandoLogo.png">
+</head>
+
+<body onload="includeHTML(), render()">
+    <div w3-include-html="./templates/nav.html"></div>
+    <!-- Shopping basket on the right side -->
+    <div id="shoppingBasket" class="shopping-basket margin-top">
+        <div id="basketTitle" class="basket-title"><h3>Warenkorb</h3><p onclick="closePurchase()" id="closureX" class="closure-x">X</p></div>
+        <div id="basketContent" class="basket-content">
+            
+            <!-- <div class="basket-elem">
+                <img class="basket-img" src="./img/basket-shopping-solid.svg" alt="">
+            </div>
+            <div class="basket-elem"><h3>Fülle deinen Warenkorb</h3></div>
+            <div class="basket-elem"><p>Füge einige leckere Gerichte aus der Speisekarte hinzu und bestelle dein Essen.</p></div> -->
+        </div>
+        <div id="basketMenu" class="basket-menu"></div>
+        
+    </div>
+    <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+    <!-- Description of the restaurant, with name, logo, reviews -->
+    <div class="restaurant">
+        <div class="header-img"><img src="./img/pizza.jpg" alt=""></div>
+        <div class="logo-rest"><img src="./img/kurt-pizza.png" alt=""></div>
+        <div class="description ">
+            <div class="description-box">
+                <div class="description-title">
+                    <h2>Kurt's Pizza</h2><img onclick="openDialog()" src="./img/reviews.png" alt="">
+                </div>
+                <div class="description-items">
+                    <div onclick="openDialog()" class="item-blue">
+                        <img src="./img/info.png" alt="">
+                    </div>
+                    <div class="item-orange">
+                        <img id="preference" onclick="heartPreference()" src="./img/heartlinear.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="description-box">
+                <p>Bei diesem Restaurant kannst du Stempel sammeln. Stelle beim Bestellabschluss bitte sicher,
+                    dass du dich für unseren Newsletter angemeldet hast, um deine Stempel per E-Mail zu erhalten. </p>
+            </div>
+        </div>
+        <!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+        <!-- Search-bar, where you can chose what kind of food are you looking for inside the restaurant menu...
+         like salats, appetizers, first courses etc. -->
+        <div class="search-bar">
+            <div onclick="openDialog()" class="search-element"><img src="./img/magnifying-glass-solid.svg" alt=""></div>
+            <div onclick="openDialog()" class="search-element">
+                <p>Beliepte Gerichte</p>
+            </div>
+            <div onclick="openDialog()" class="search-element">
+                <p>Salate</p>
+            </div>
+            <div onclick="openDialog()" class="search-element">
+                <p>Pizza Classics</p>
+            </div>
+            <div onclick="openDialog()" class="search-element">
+                <p>Pizza Premium</p>
+            </div>
+        </div>
+        <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+        <!-- Presentation of different typologies of pizzas, where you can find descriptions, prices and chose function to add
+             the product to the shopping cart -->
+        <div class="menu-container">
+            <div class="category">
+                <h3>Beliebte Gerichte</h3>
+            </div>
+            <div id="recipeBox" class="recipe-box">
+
+            </div>
+            <div class="recipe-box">
+                <div class="recipe-description-box">
+                    <div class="recipe-title">
+                    <h3 id="rc1" >Pizza Margherita</h3>
+                    </div>
+                    <div class="recipe-text">
+                        <p>Mit Tomatensauce, Mozzarella und Basilikum</p>
+                    </div>
+                    <div class="recipe-price">
+                        <p id="pr1">9.75 €</p>
+                    </div>
+                </div>
+                <div class="recipe-chose-box">
+                    <img onclick="addRecipe('rc1', 'pr1')" class="plus-icon" src="./img/plus-solid.svg" alt="">
+                </div>
+            </div>
+            <div class="recipe-box">
+                <div class="recipe-description-box">
+                    <div class="recipe-title">
+                        <h3 id="rc2">Pizza Salami</h3>
+                    </div>
+                    <div class="recipe-text">
+                        <p>Mit Salami und Käse</p>
+                    </div>
+                    <div class="recipe-price">
+                        <p id="pr2" >12.50 €</p>
+                    </div>
+                </div>
+                <div class="recipe-chose-box">
+                    <img onclick="addRecipe('rc2', 'pr2')" href class="plus-icon" src="./img/plus-solid.svg" alt="">
+                </div>
+            </div>
+            <div class="recipe-box">
+                <div class="recipe-description-box">
+                    <div class="recipe-title">
+                        <h3 id="rc3">Pizza Tonno</h3>
+                    </div>
+                    <div class="recipe-text">
+                        <p>Mit Thunfisch, Zwiebeln und Käse</p>
+                    </div>
+                    <div class="recipe-price">
+                        <p id="pr3">14.50 €</p>
+                    </div>
+                </div>
+                <div class="recipe-chose-box">
+                    <img onclick="addRecipe('rc3', 'pr3')" class="plus-icon" src="./img/plus-solid.svg" alt="">
+                </div>
+            </div>
+            <div class="recipe-box">
+                <div class="recipe-description-box">
+                    <div class="recipe-title">
+                        <h3 id="rc4">Pizza Capricciosa</h3>
+                    </div>
+                    <div class="recipe-text">
+                        <p>Mit Forderschinken, frische Ergerlingen, Artischocken, Oliven und Käse</p>
+                    </div>
+                    <div class="recipe-price">
+                        <p id="pr4">14.50</p>
+                    </div>
+                </div>
+                <div class="recipe-chose-box">
+                    <img onclick="addRecipe('rc4', 'pr4')" class="plus-icon" src="./img/plus-solid.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+    </div>
+    <!-- Ende of the restaurant container inside the body -->
+    <div class="footer">
+        <div class="footer-case">
+            <div class="footer-logo"><a href="index.html"><img class="logo" src="./img/LieferandoLogo.png" alt=""></a></div>
+            <div class="copyright"><p class="text-footer">&copy 2022 Lieferando</p></div>
+        </div>
+        <div class="footer-case social-box">
+            <div class="social-link"><a href="https://www.facebook.com/"><img class="social-item" src="./img/facebook-brands.svg" alt=""></div></a>
+            <div class="social-link"><a href="https://www.instagram.com/"><img class="social-item" src="./img/instagram-brands.svg" alt=""></div></a>
+            <div class="social-link"><a href="https://www.tiktok.com/de-DE"><img class="social-item" src="./img/tiktok-brands.svg" alt=""></div></a>
+        </div>
+        <div class="footer-case">
+            <div class="impressum "><p><a class="text-footer" href="./impressum.html">impressum</a></p></div>
+            <div class="datenschutz "><p><a class="text-footer" href="./datenschutz.html">Datenschutz</a></p></div>
+        </div>
+    </div>
+    <div id="dialog" class="dialog d-none">
+        <div class="dialog-window">
+            <div class="dialog-title"><h2>Achtung!</h2></div>
+            <div class="dialog-paragraph"><p>Funktion noch nicht vorhanden :)</p></div>
+            <h2 onclick="closeDialog()" class="dialog-closer">X</h2>
+        </div>
+    </div>
+    
+</body>
+<div onclick="showPurchase()" class="button-res"><button id="countPurchase">Warenkorb</button></div>
+
+</html>
+
+
+
+

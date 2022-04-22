@@ -1,0 +1,211 @@
+/* Responsive 1700px */
+@media (max-width:1700px){
+    .footer-case {
+        margin-left: 170px;
+    }
+}
+/* Responsive 1600 px */
+@media (max-width: 1600px){
+    .footer-case {
+        margin-left: 150px;
+    }
+}
+/* Responsive 1500px */
+@media (max-width:1500px){
+    .footer-case {
+        margin-left: 120px;
+    }
+}
+/* Responsive 1350 px */
+@media (max-width:1350px){
+    .recipe-box {
+        margin-left: 6px;
+    }
+    .footer-case {
+        margin-left: 80px;
+    }
+}
+/* Responsive 1150px */
+@media (max-width:1150px){
+    
+    .shopping-basket {
+        width: 0;
+    }
+    .basket-title {
+        opacity: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .basket-title h3 {
+        margin-left: 24px;
+    }
+    .closure-x {
+        margin-right: 24px;
+        cursor: pointer;
+        font-weight: 600;
+    }
+    .shopping-basket-full-view {
+        bottom: 0 !important;
+        top: 0 !important;
+        width: 100%;   
+        transition: all 225ms ease-in-out;
+    }
+    .recipe-box {
+        margin-left: 24px;
+    }
+    .restaurant {
+        width: 100%;
+    }
+    .logo-rest {
+        left: 40vw;
+    }
+    .recipe-box {
+        margin-right: 24px;
+    }
+    .button-res{
+        display: unset;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        transition: all 75ms ease-in-out;
+        right: 0;
+        padding: 6px;
+        background-color: white;
+    }
+    .button-res button {
+        background-color: #146EEB;
+        color: white;
+        font-weight: 600;
+        text-align: center;
+        border: none;
+        padding: 12px;
+        width: 100%;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+    .footer {
+        margin-bottom: 50px;
+        justify-content: space-around;
+    }
+    .footer-case{
+        margin-left: 0;
+    }
+    /* footer impressum and datenschutz */
+    .footer-special {
+        margin-bottom: 0 !important;
+    }
+}
+/* Responsive 700px */
+@media (max-width:700px){
+    .search-bar {
+        gap: 50px;
+    }
+    /* datenschutz */
+    .word-wrap{
+        word-wrap: break-word;
+    }
+    p, li {
+        font-size: 1.2rem;
+    }
+}
+/* Responsive 650px */
+@media (max-width:650px){
+    .search-bar {
+        gap: 20px;
+        flex-wrap: wrap;
+        padding-left: 0;
+        justify-content: center;
+    }
+    .logo-rest img {
+        height: 180px;
+        width: 180px;
+    }
+    .search-element {
+        text-align: center;
+    }
+    .search-element p {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .footer {
+        flex-direction: column-reverse;
+        align-items: center;
+        height: 344px;
+    }
+    .footer-case {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 40px;
+    }
+}
+/* Responsive 500px */
+@media (max-width:500px){
+    .logo-rest img {
+        height: 120px;
+        width: 120px;
+    }
+    .logo-rest {
+        top: 350px;
+        left: 55vw;
+    }
+    .footer-case{
+        gap: 30px;
+    }
+    .social-item {
+        height: 40px;
+    }
+    .description-item {
+        padding-right: 0;
+    }
+    /* Datenschutz */
+    .datenschutz {
+        text-align: center;
+    }
+    .datenschutz ul{
+        text-align: left;
+        padding-left: 36px;
+    }
+    .datenschutz h1 {
+        font-size: 1.5em;
+    }
+    .datenschutz h2 {
+        font-size: 1.2em;
+    }
+    .datenschutz p {
+        word-wrap: break-word;
+    }
+}
+/* Responsive 450px */
+@media (max-width:450px){
+    .description-box {
+        flex-direction: column !important;
+    }
+    
+    .description-items {
+        padding-right: 0;
+        padding-left: 25px;
+    }
+    .icon-lang {
+        display: none;
+    }
+    .logo {
+        margin-left: 12px;
+        width: 70px;
+        height: 70px;
+    }
+    .icon-bar {
+        width: 35px;
+        height: 35px;
+    }
+    .adress {
+        font-size: 20px;
+        text-align: center;
+    }
+    /* datenschutz */
+    .datenschutz {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+}

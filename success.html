@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="templates.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <title>Kurt's Pizza - Essen bestellen | Lieferando</title>
+    <link rel="icon" type="image/x-icon" href="./img/LieferandoLogo.png">
+</head>
+
+<body onload="includeHTML()">
+    <!-- NAVBAR -->
+    <div w3-include-html="./templates/nav.html"></div>
+    <!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+    <div style="margin-top: 220px; text-align: center; margin-bottom: 120px; ">
+        <h1>Ihr Einkauf wurde erfolgreich abgeschlossen!</h1>
+        <h2>Klick hier um zum Index zurückzukehren</h2>
+        <a href="index.html"><img style="cursor: pointer; height: 10vw; width: 10vw; filter: invert(23%) sepia(82%) saturate(5529%) hue-rotate(233deg) brightness(99%) contrast(104%);" src="./img/person-walking-arrow-loop-left-solid.svg" alt=""></a>
+    </div>
+    <!-- FOOTER -->
+    <div class="footer" style="margin-bottom: 0 !important;bottom: 0; justify-content: space-around;">
+        <div class="footer-case">
+            <div class="footer-logo"><a href="index.html"><img class="logo" src="./img/LieferandoLogo.png" alt=""></a>
+            </div>
+            <div class="copyright">
+                <p class="text-footer">&copy 2022 Lieferando</p>
+            </div>
+        </div>
+        <div class="footer-case social-box">
+            <div class="social-link"><a href="https://www.facebook.com/"><img class="social-item"
+                        src="./img/facebook-brands.svg" alt=""></div></a>
+            <div class="social-link"><a href="https://www.instagram.com/"><img class="social-item"
+                        src="./img/instagram-brands.svg" alt=""></div></a>
+            <div class="social-link"><a href="https://www.tiktok.com/de-DE"><img class="social-item"
+                        src="./img/tiktok-brands.svg" alt=""></div></a>
+        </div>
+        <div class="footer-case">
+            <div class="impressum ">
+                <p><a class="text-footer" href="./impressum.html">impressum</a></p>
+            </div>
+            <div class="datenschutz ">
+                <p><a class="text-footer" href="./datenschutz.html">Datenschutz</a></p>
+            </div>
+        </div>
+    </div>
+    <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+    <div id="dialog" class="dialog d-none">
+        <div class="dialog-window">
+            <div class="dialog-title">
+                <h2>Achtung!</h2>
+            </div>
+            <div class="dialog-paragraph">
+                <p>Funktion noch nicht vorhanden :)</p>
+            </div>
+            <h2 onclick="closeDialog()" class="dialog-closer">X</h2>
+        </div>
+    </div>
+
+</body>
+
+</html>

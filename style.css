@@ -1,0 +1,377 @@
+/* Style of generals */
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    overflow-y: scroll;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+.d-none {
+    display: none;
+}
+/* ----------------------------------------------------------------------- */
+/* Style of navbar */
+.nav-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background-color: rgb(251, 97, 0);
+    display: flex;
+    align-items: center;
+   justify-content: space-between;
+   z-index: 999;
+}
+.nav-icon{
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    margin-right: 2vw;
+}
+.logo {
+    cursor: pointer;
+    height: 90px;
+    width: 90px;
+    margin-left: 35px;
+}
+.adress {
+    color: white;
+    text-decoration: underline;
+    font-size: 24px;
+    font-weight: 600;
+}
+.icon-lang {
+    height: 50px;
+    width: 50px;
+}
+.icon-bar {
+    height: 50px;
+    width:50px;
+    filter: invert();
+    cursor: pointer;
+}
+/* --------------------------------------------------------------- */
+/* Style of restaurant presentation with title, reviews and description of the restaurant */
+.restaurant {
+    width: 74%;
+}
+.header-img img {
+    height: 410px;
+    /* width: 74vw; */
+    object-fit: cover;
+    width: 100%;   
+}
+.logo-rest {
+    position:absolute;
+    top: 0;
+    left: 32vw;
+    top: 310px;
+    background-color: white;
+    border-radius: 100%;
+    box-shadow: 0 2px 2px 0 rgb(0, 0, 0, 0.4);
+}
+.logo-rest img {
+    height: 200px;
+    width: 200px; 
+}
+.description-box {
+    display: flex;
+    flex-direction: row !important;
+    justify-content: space-between;
+    word-wrap: break-word;
+    /* width: 75vw; */
+}
+.description-title {
+    padding-left: 25px;
+}
+.description-box p {
+    padding-left: 25px;
+    font-style: italic;
+}
+.description-items {
+    display: flex;
+    align-items: center;
+    padding-right: 25px;
+}
+.description-items img {
+    height: 40px;
+    width: 40px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 3px;
+    cursor: pointer;
+}
+/* In the presentation of the restaurant with a title and the description, that's a style of the icon with heart shape ----♥----.
+ That's also belong to ".description-items img" up there like the icon of the info-box ----i----. 
+ So the icons have different values for height, width and padding, because already at the beginning the sizes of the images are different */
+#preference {
+    height: 30px;
+    width: 30px;
+    padding: 8px;
+}
+/* ------------------------------------------------------------------------------------------------------------------------------ */
+.item-blue img:hover {
+    border: 1px solid rgb(98, 158, 242);
+}
+.item-orange img:hover {
+    border: 1px solid rgb(251, 97, 0); ;
+}
+/* Style of search-bar with different kinds of courses */
+.search-bar {
+    /* width: 73vw; */
+    display: flex;
+    justify-content: flex-start;
+    gap: 80px;
+    align-items: center;
+    background-color: rgb(248, 245, 242);
+    padding-left: 25px;
+}
+.search-element {
+    display: flex;
+    align-items: center;
+}
+.search-element img {
+    width: 30px;
+    height: 30px;
+}
+/* ----------------------------------------------------------------------------------------------------------------------------------------- */
+/* Style of the recipe boxes. Where different Pizzas to chose from are showed */
+.category {
+    margin-left: 24px;
+    /* width: 73vw; */
+}
+.recipe-box {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    margin-left: 24px;
+    padding-left: 24px;
+    margin-bottom: 12px;
+}
+.recipe-box:hover {
+    border: 1px solid rgb(98, 158, 242);
+    cursor: pointer;
+}
+.recipe-price {
+    color: rgb(251, 97, 0);
+    font-size: 23px;
+    font-weight: 700;
+}
+.plus-icon {
+    width: 30px;
+    padding: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    filter: invert(40%) sepia(97%) saturate(1702%) hue-rotate(198deg) brightness(86%) contrast(89%);
+}
+/* Style scrollbar */
+/* width */
+.basket-content::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  .basket-content::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  .basket-content::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  .basket-content::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+/* ------------------------------------------------------------------------------------------------- */
+/* Style of the empty shopping basket on the right side of the Website */
+.shopping-basket {
+    width: 25%;
+    position: fixed;
+    right: 0;
+    top: 100px;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow: 6px 0 24px 6px rgb(0 0 0 / 0.3);
+    z-index: 1000;
+    transition: all 125ms ease-in-out;
+    background-color: white;
+}
+.basket-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    z-index: 1100;
+    background-color: white;
+}
+.closure-x {
+    display: none;
+}
+.basket-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 150px;
+    padding-bottom: 20px;
+    width: 100%;
+    z-index: 1100;
+    background-color: white; 
+    overflow: auto;
+}
+.basket-menu {
+    width: 100%;
+    background-color: white;
+}
+.basket-elem h3 {
+    text-align: center;
+}
+.basket-elem p {
+   text-align: center;
+}
+.basket-img {
+    width: 60px;
+}
+/* -------------------------------------------------------------------------------------------------- */
+/* Style of the fulled shopping basket */
+.basket-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.basket-chose-box {
+    cursor: pointer;
+    margin-bottom: 12px;
+    margin-left: 12px;
+    margin-right: 12px;
+}
+.basket-item{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;   
+}
+.basket-item p {
+    margin-left: 24px;
+    margin-right: 24px;
+}
+.text-amount {
+    margin-right: 12px;
+}
+.text-price {
+    margin-left: 12px;
+}
+.border-top {
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    width: 100%;
+}
+.button-purchase {
+    background-color: #146EEB;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    cursor: pointer;
+}
+.button-box{
+    width: 100%;
+}
+/* ------------------------------------------------------------------------------------------------------------ */
+/* Style of footer */
+.footer{
+    height: 200px;
+    right: 0;
+    left: 0;
+    background-color: rgb(10, 56, 71);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: 800;
+}
+.footer-case {
+    margin-left: 200px;
+}
+.text-footer{
+    color: white;
+    font-weight: 500;
+    font-size: 23px;
+}
+.social-box {
+    display: flex;
+}
+.social-item {
+    height: 60px;
+    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(219deg) brightness(111%) contrast(103%);
+    margin-left: 12px;
+    margin-right: 12px;
+}
+.button-res {
+    display: none;
+}
+/* Style of impressum.html and datenschutz.html */
+.impressum, .datenschutz {
+    margin-left: 36px;
+    margin-right: 36px;
+    margin-bottom: 24px;
+    overflow-x: hidden;
+    
+}
+.footer-special {
+    justify-content: space-around !important;
+}
+.footer-case-special {
+    margin-left: 0;
+}
+.datenschutz ul {
+    padding-left: 20px;
+}
+/* Style of Dialog window */
+.dialog {
+    background-color: rgb(0, 0, 0);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.9;
+}
+.dialog-window {
+    position: fixed;
+    top: 20vh;
+    bottom: 40vh;
+    left: 30vw;
+    right: 30vw;
+    background-color: rgb(250, 250, 250) ;
+    border-radius: 3%;
+}
+.dialog-title {
+    border-bottom: 2px solid rgb(100, 100, 100);
+    text-align: center;
+}
+.dialog-paragraph {
+    text-align: center;
+    font-weight: 500;
+    font-size: 26px;
+}
+.dialog-closer {
+    position: fixed;
+    bottom: 20vh;
+    color: rgb(250, 250, 250);
+    text-align: center;
+    right: 45vw;
+    left: 45vw;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
